@@ -23,9 +23,9 @@ printExtendedColors :: IO ()
 printExtendedColors = do
   setSGR []
   putStrLn ""
-  putStrLn "                    Standard Colors                                       Extended Colors"
+  putStrLn "                     Standard Colors                                       Extended Colors"
   putStrLn ""
-  putStr "       "
+  putStr "        "
   forM_ [0..7] $ \i -> do
     setSGR []
     setSGR [SetPaletteColor Background i, SetPaletteColor Foreground white]
@@ -52,24 +52,27 @@ calcWhiteOrBlack i =
 print216Colors :: IO ()
 print216Colors = do
   setSGR []
-  putStrLn "                                                 216 Colors"
+  putStrLn "                                                  216 Colors"
   putStrLn ""
+  putStr " "
   forM_ [16..231] $ \i -> do
     setSGR []
     let whiteOrBlack = calcWhiteOrBlack i
     setSGR [SetPaletteColor Background i, SetPaletteColor Foreground whiteOrBlack]
     printf "%3u" i
     setSGR []
-    when (((i - 15) `mod` 36) == 0) $ putStrLn ""
+    when (((i - 15) `mod` 36) == 0) $ do
+      putStrLn ""
+      putStr " "
   putStrLn ""
   putStrLn ""
 
 printGreyscaleColors :: IO ()
 printGreyscaleColors = do
   setSGR []
-  putStrLn "                                                 Greyscale"
+  putStrLn "                                                  Greyscale"
   putStrLn ""
-  putStr "   "
+  putStr "    "
   forM_ [232..243] $ \i -> do
     setSGR []
     setSGR [SetPaletteColor Background i, SetPaletteColor Foreground white]
