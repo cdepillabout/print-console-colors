@@ -72,14 +72,14 @@ printGreyscaleColors = do
   setSGR []
   putStrLn "                                                  Greyscale"
   putStrLn ""
-  putStr "    "
+  putStr "     "
   forM_ [232..243] $ \i -> do
     setSGR []
     setSGR [SetPaletteColor Background i, SetPaletteColor Foreground white]
     printf "%3u" i
     setSGR []
     putStr " "
-  putStr "       "
+  putStr "     "
   forM_ [244..255] $ \i -> do
     setSGR []
     setSGR [SetPaletteColor Background i, SetPaletteColor Foreground black]
