@@ -2,7 +2,19 @@ cabal-version: 1.12
 
 name:           print-console-colors
 version:        0.1.0.0
-description:    Show all console colors.
+synopsis:       Print all ANSI console colors
+description:
+  Print all ANSI console colors.
+  .
+  .
+  <<https://raw.githubusercontent.com/cdepillabout/print-console-colors/master/img/example.png>>
+  .
+  This is convenient when you are trying to set your console colors,
+  for example when configuring <https://github.com/cdepillabout/termonad Termonad>.
+  .
+  For installation and usage instructions, see the
+  <https://github.com/cdepillabout/print-console-colors README>.
+
 homepage:       https://github.com/cdepillabout/print-console-colors#readme
 bug-reports:    https://github.com/cdepillabout/print-console-colors/issues
 author:         Dennis Gosnell
@@ -10,6 +22,7 @@ maintainer:     cdep.illabout@gmail.com
 copyright:      Copyright (c) 2019 Dennis Gosnell
 license:        BSD3
 license-file:   LICENSE
+category:       Console
 build-type:     Simple
 extra-source-files:
     README.md
