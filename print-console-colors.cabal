@@ -29,7 +29,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
-    , ansi-terminal
+    , ansi-terminal >=0.9
   default-language: Haskell2010
   default-extensions:
       DataKinds
