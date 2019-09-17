@@ -1,5 +1,4 @@
 .stack-work/
-print-console-colors.cabal
 *~
 dist/
 dist-newstyle/
