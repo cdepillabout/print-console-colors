@@ -8,7 +8,7 @@
 
 Print all the ANSI console colors for your terminal.
 
-[![Picture showing how the program looks](./imgs/example.png)](./imgs/example.png)
+[![Picture showing how the program looks](./img/example.png)](./img/example.png)
 
 This program is useful when trying to set your terminal emulator colors, for
 instance, when configuring [Termonad](https://github.com/cdepillabout/termonad).
