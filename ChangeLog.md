@@ -1,3 +1,5 @@
 # Changelog for print-console-colors
 
-## Unreleased changes
+## 0.1.0.0
+
+*    Initial relase.

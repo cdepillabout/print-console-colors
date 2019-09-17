@@ -1,7 +1,7 @@
 module PrintConsoleColors where
 
-import ClassyPrelude
-
+import Control.Monad (forM_, when)
+import Data.Word (Word8)
 import System.Console.ANSI
 import Text.Printf
 
