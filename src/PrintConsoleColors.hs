@@ -2,14 +2,15 @@ module PrintConsoleColors where
 
 import Control.Monad (forM_, when)
 import Data.Word (Word8)
-import System.Console.ANSI
-import Text.Printf
+import System.Console.ANSI (ConsoleLayer(Background, Foreground), SGR(SetPaletteColor), setSGR)
+import Text.Printf (printf)
 
 printConsoleColors :: IO ()
 printConsoleColors = do
   printExtendedColors
   print216Colors
   printGreyscaleColors
+  setSGR []
   putStrLn ""
 
 white :: Word8
@@ -20,7 +21,7 @@ black = 0
 
 printExtendedColors :: IO ()
 printExtendedColors = do
-  setSGR [Reset]
+  setSGR []
   putStrLn ""
   putStrLn "                    Standard Colors                                       Extended Colors"
   putStrLn ""
@@ -50,7 +51,7 @@ calcWhiteOrBlack i =
 
 print216Colors :: IO ()
 print216Colors = do
-  setSGR [Reset]
+  setSGR []
   putStrLn "                                                 216 Colors"
   putStrLn ""
   forM_ [16..231] $ \i -> do
@@ -65,7 +66,7 @@ print216Colors = do
 
 printGreyscaleColors :: IO ()
 printGreyscaleColors = do
-  setSGR [Reset]
+  setSGR []
   putStrLn "                                                 Greyscale"
   putStrLn ""
   putStr "   "
